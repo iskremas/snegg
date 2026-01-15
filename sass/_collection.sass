@@ -1,0 +1,163 @@
+.collection 
+     display: flex
+     flex-direction: column
+     gap: 4rem
+     
+     &__info 
+          display: flex  
+          gap: 4rem       
+
+     &__hedding
+          flex: 1 0 65rem
+
+     &__desk  
+
+     &__slider-goods
+          
+          .slick-slider
+               position: relative
+          .slick-list
+               overflow: hidden               
+          .slick-track
+               display: flex 
+               align-items: flex-start 
+               gap: 2rem             
+          .slick-slide
+               display: flex
+               flex-direction: column
+               justify-content: space-between               
+               align-items: center
+               position: relative 
+               height: 32rem !important
+               border-radius: 2rem
+               overflow: hidden
+               transition: var(--trasition-slow)  
+               padding: 1.8rem             
+               img
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    z-index: -2
+                    display: block
+               &:before
+                    content:""
+                    position: absolute
+                    top:0
+                    left: 0
+                    background-color: rgba(17,17,17, 0.5)
+                    z-index: -1
+                    width: 100%
+                    height: 100%
+                    transition: var(--trasition-slow)
+               &:hover
+                    &:before
+                         content:""
+                         position: absolute
+                         top:0
+                         left: 0
+                         background-color: rgba(17,17,17, 0.1)
+                         z-index: -1
+                         width: 100%
+                         height: 100%
+                         transition: var(--trasition-slow)
+               &:after
+                    content:""
+                    position: absolute
+                    top:0
+                    left: 0
+                    background-color: var(--dark-grey)
+                    z-index: -3
+                    width: 100%
+                    height: 100%
+                    
+                    
+
+          .slick-arrow
+               position: absolute
+               top: 50%
+               transform: translateY(-50%)
+               font-size: 0px 
+               padding: 2.5rem
+               z-index: 10
+               background-color: transparent
+               border-color: 1px solid var(--white)  
+               &:hover
+                    animation: pulse 1.5s infinite              
+          .slick-prev
+               left: 0
+               background: url("../images/svg/keyboard_arrow_left.svg") 50% 50% no-repeat
+              
+              
+                          
+          .slick-next
+               right: 0
+               background: url("../images/svg/keyboard_arrow_right.svg") 50% 50% no-repeat
+               
+                    
+                    
+                    
+
+     &__list
+          padding: 0 7rem
+     &__item
+          
+
+     &__item-top 
+          display: flex
+          flex-direction: column
+          align-items: center
+          gap:.5rem
+          hr 
+               width: 12rem
+               height: 0.2rem
+               background-color: var(--white)
+               margin: 1rem 0
+     &__item-bottom
+          display: flex
+          flex-direction: column
+          align-items: center
+          gap:.5rem
+
+     &__item--genre
+          font-size: 1rem
+          font-weight: 400 
+
+     &__item--title 
+          @include h4-default
+
+     &__item--year 
+          @include h5-default
+
+     &__item-bottom 
+          
+
+     &__item--created 
+          font-size: 1rem
+          font-weight: 400 
+     &__item--name 
+          @include h5-default
+     
+     &__catalog-link
+          text-align: center
+          a
+               text-transform: uppercase                         
+               @include h5-default               
+               padding: 1rem
+               border: 1px solid transparent
+               transition: var(--trasition-defalt)
+               &:hover                 
+                    border: 1px solid var(--white)
+                    transition: var(--trasition-defalt)
+               &:active
+                    animation: pulse .5s
+                  
+                    
+                    
+
+
+  
+
+                  

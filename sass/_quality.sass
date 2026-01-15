@@ -1,0 +1,74 @@
+.quality      
+
+     &__info
+          display: flex
+          gap: 4rem
+          margin-bottom: 4rem
+
+     &__hedding 
+          flex: 1 0 65rem
+
+     &__desk 
+
+     &__content
+          padding: 1rem
+                  
+
+     &__content-bg
+          width: 100%
+          height: 56rem 
+          position: relative 
+          border-radius: 3rem
+          display: block
+          overflow: hidden         
+          img
+               position: absolute
+               top: 0
+               right: 0
+               width: 100%
+               height: 100%
+               object-fit: cover
+          &::before
+               content: ""
+               position: absolute
+               top: 0
+               right: 0
+               width: 100%
+               height: 100%
+               background-color: var(--black)
+               z-index: -1
+               
+     &__content-list
+          display: flex          
+
+     &__content-item
+         flex: 1 0 33.33%
+         position: relative
+
+     &__content-item--icon 
+          position: absolute
+          bottom: 2rem
+          left: 1rem
+          padding: 0.3rem 
+          background-color: var(--white)
+          color: black
+          mix-blend-mode: screen
+          font-family: 'Lato',sans-serif
+          text-transform: uppercase
+          font-weight: 800
+          
+         
+
+
+     &__content-item--size
+          position: absolute
+          bottom: 2rem
+          left:50%
+          transform: translateX(-50%)
+          
+          &::before
+               content: ""
+
+
+
+

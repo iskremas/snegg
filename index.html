@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/search.js" defer></script>
+    <script src="/js/toogle-lang.js" defer></script>
+    <script src="/js/notifications.js" defer></script>
+    <script src="/js/burger_menu.js" defer></script>
+    <script src="/js/motion.js" defer></script>
+    <script src="/js/slick.min.js" defer></script>
+    <script src="/js/slider.js" defer></script>
+    <script src="/js/video.js" defer></script>
+    <script src="/js/collection.js" defer></script>
+    <script src="/js/price.js" defer></script>
+    <script src="/js/button-top.js" defer></script>
+    <script src="/js/team.js" defer></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/fonts/stylesheet.css" />
+    <title>Сайт аниме художника</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <form class="header__search-form" action="">
+          <div class="header__input-button-form">
+            <input type="text" class="header__search-input" />
+            <a type="button" class="header__search-button"></a>
+          </div>
+          <button class="header__cloze--search-input"></button>
+        </form>
+        <div class="header__top-block">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#">snegg</a>
+          </div>
+          <div class="header__lang">
+            <a class="header__lang-btn button" href="#">en</a>
+            <a class="header__lang-btn button no-active" href="#">ru</a>
+          </div>
+          <div class="header__interactive">
+            <div class="header__search">
+              <button
+                class="header__search-btn-link header__interactive-button"
+              ></button>
+            </div>
+            <div class="header__notifications">
+              <button
+                class="notifications-toggle notifications-toggle--off header__interactive-button"
+                aria-label="Уведомления"
+                aria-pressed="false"
+                data-notifications-state="off"
+              ></button>
+            </div>
+            <div class="header__nav">
+              <div class="header__burger header__interactive-button">
+                <span class="header__burger-btn"></span>
+              </div>
+              <div class="header__dropdown-nenu--block">
+                <div class="header__nav-button--block">
+                  <button class="header__nav-button--close"></button>
+                </div>
+                <div class="header__nav-menu--soc">
+                  <nav class="header__nav-menu active">
+                    <ul class="header__nav-list">
+                      <li class="header__nav-item">
+                        <a href="/" class="header__nav-link">Главная</a>
+                      </li>
+                      <li class="header__nav-item">
+                        <a href="/" class="header__nav-link">Портфолио</a>
+                      </li>
+                      <li class="header__nav-item">
+                        <a href="/" class="header__nav-link">Услуги и цены</a>
+                      </li>
+                      <li class="header__nav-item">
+                        <a href="/" class="header__nav-link">Контакты</a>
+                      </li>
+                      <li class="header__nav-item">
+                        <a href="/" class="header__nav-link">Блог</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="header__soc-block">
+                    <a href="http://" class="icon__whatsup">
+                      <svg class="icon">
+                        <use
+                          xlink:href="/images/svg-sprite/sprite.svg#whatsup-icon"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a href="http://" class="vk-icon">
+                      <svg class="icon">
+                        <use
+                          xlink:href="/images/svg-sprite/sprite.svg#vk-icon"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a href="http://" class="telegram-icon">
+                      <svg class="icon">
+                        <use
+                          xlink:href="/images/svg-sprite/sprite.svg#telegram-icon"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a href="http://" class="instagram-icon">
+                      <svg class="icon">
+                        <use
+                          xlink:href="/images/svg-sprite/sprite.svg#iinstagram-icon"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom--block">
+          <div class="header__banner--slider">
+            <div class="header__banner-shadow"></div>
+            <div class="header__banner--list">
+              <div class="header__banner--item">
+                <img src="/images/header/slider/banner1.jpg" alt="" />
+              </div>
+              <div class="header__banner--item">
+                <img src="/images/header/slider/banner2.jpg" alt="" />
+              </div>
+              <div class="header__banner--item">
+                <img src="/images/header/slider/banner3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="header__content">
+            <div class="header__content-heding">
+              <h1>Вы на сайте SNEGG</h1>
+              <div class="header__content--desk">
+                Оживляю ваши идеи в стиле аниме! Рисую ярких персонажей,
+                эмоциональные портреты и динамичные сцены. Открыта для
+                сотрудничества и создания уникальных работ по вашим пожеланиям.
+              </div>
+              <button type="header__content--button">Задай мне вопрос</button>
+            </div>
+            <div class="header__content-soc">
+              <div class="header__soc-block">
+                <h3>социальные сети</h3>
+                <h5>связаться со мной можно и тут</h5>
+                <div class="header__soc-list">
+                  <a class="insatgram-icon" href="#">insatgram/snegg</a>
+                  <a class="vk-icon" href="#">vk/snegg</a>
+                  <a class="telegram-icon" href="#">telegram/snegg</a>
+                  <a class="whatsup-icon" href="#">whatsup/snegg</a>
+                </div>
+              </div>
+              <div class="header__soc-autor">
+                <div class="header__autor-link">
+                  <div class="header__link-title">
+                    <a href="/">На вкусный<br> утренний кофе</a>
+                  </div>
+                </div>
+                <div class="header__autor--img">
+                  <img src="/images/header/qrCode.png" alt="" />
+                  <!--<h3 class="header__autor--text">Нравится искусство? Поддержи художника</h3>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="anime-motion">
+          <div class="motion">
+            <div class="motion__info">
+              <div class="motion__heding title--block">
+                <h4>Внимание, Камера, Мотор!</h4>
+                <h2>Анимационная работа</h2>
+              </div>
+              <hr />
+              <div class="motion__desk">
+                Мы давно мечтали создать что-то своё, и наконец готовы показать
+                наше новое начало! «Один день» — это наша первая оригинальная
+                анимация, наш первый самостоятельный шаг, наш вызов самим себе и
+                новый этап для команды. Приятного просмотра!
+              </div>
+              <div class="motion__video--video-info">
+                <ul class="motion__video--video-list">
+                  <li class="motion__video--video-item">
+                    <div class="motion__video--video-count">219 000</div>
+
+                    <div class="motion__video--video-name">youtube</div>
+                  </li>
+                  <li class="motion__video--video-item">
+                    <div class="motion__video--video-count">148 000</div>
+
+                    <div class="motion__video--video-name">ВК Видео</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="motion__video">
+              <div class="motion__video--container">
+                <div class="motion__video--video">
+                  <video
+                    controlslist="nofullscreen nodownload noremoteplayback"
+                    disablepictureinpicture=""
+                    preload="metadata"
+                    muted=""
+                    playsinline=""
+                    poster="../video/deluk-pre-download.jpg"
+                    src="/video/Аниме Дилюк Один день pancakeser.mp4"
+                  ></video>
+                  <!--
+                  <iframe
+                    src="https://www.youtube.com/embed/EYmfYA2naR4?si=-5zBY3cL6xc2f6WW"
+                    
+                  >
+                  </iframe>-->
+                </div>
+                <div class="motion__play--button">
+                  <button class="motion__play--btn"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anime-collection">
+          <div class="collection">
+            <div class="collection__info">
+              <div class="collection__hedding title--block">
+                <h4>Смотреть работы</h4>
+                <h2>Готовые картинки</h2>
+              </div>
+              <div class="collection__desk">
+                Discover new favorites with our expertly curated collections and
+                personalized suggestions based on your viewing habits. Discover
+                new favorites with our expertly curated collections and
+                personalized suggestions based on your viewing habits.
+              </div>
+            </div>
+            <div class="collection__slider-goods">
+              <div class="collection__list">
+                <div class="collection__item">
+                  <img src="/images/collection/collection1.jpg" alt="" />
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">WARDIANS</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Chiaki Kasuga</div>
+                  </div>
+                </div>
+                <div class="collection__item">
+                  <img src="/images/collection/collection2.jpg" alt="" />
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">MAGICA</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Kurosawa Akiyo</div>
+                  </div>
+                </div>
+                <div class="collection__item">
+                  <img src="/images/collection/collection3.jpg" alt="" />
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">WARDIANS</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Chiaki Kasuga</div>
+                  </div>
+                </div>
+                <div class="collection__item">
+                  <img src="/images/collection/collection4.jpg" alt="" />
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">WARDIANS</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <img src="/images/collection/collection5.jpg" alt="" />
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Chiaki Kasuga</div>
+                  </div>
+                </div>
+                <div class="collection__item">
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">WARDIANS</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Chiaki Kasuga</div>
+                  </div>
+                </div>
+                <div class="collection__item">
+                  <img src="/images/collection/collection4.jpg" alt="" />
+                  <div class="collection__item-top">
+                    <div class="collection__item--genre">Drama, Adventure</div>
+                    <div class="collection__item--title">WARDIANS</div>
+                    <hr />
+                    <div class="collection__item--year">2024</div>
+                  </div>
+                  <div class="collection__item-bottom">
+                    <div class="collection__item--created">Directed by</div>
+                    <div class="collection__item--name">Chiaki Kasuga</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collection__catalog-link">
+              <a href="/">LEARN MORE</a>
+            </div>
+          </div>
+        </section>
+        <section class="anime-quality">
+          <div class="quality">
+            <div class="quality__info">
+              <div class="quality__hedding title--block">
+                <h4>Создание анимированных роликов</h4>
+                <h2>Анимация</h2>
+              </div>
+              <div class="quality__desk">
+                Experience every scene in stunning HD, 4K, and beyond. Immerse
+                yourself in top-notch sound and picture quality.
+              </div>
+            </div>
+            <div class="quality__content">
+              <div class="quality__content-bg">
+                <img src="/images/header/slider/banner1.jpg" alt="" />
+              </div>
+              <div class="quality__content-list">
+                <div class="quality__content-item">
+                  <div class="quality__content-item--icon">4К</div>
+                  <div class="quality__content-item--size">3840 X 2160</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anime-expert">
+          <div class="expert">
+            <div class="expert__info">
+              <div class="expert__heading title--block">
+                <h4>Рисование на заказ</h4>
+                <h2>Аниме картинки</h2>
+              </div>
+              <hr />
+              <div class="expert__desk">
+                Enjoy endless entertainment with our vast library of movies,
+                available for streaming 24/7.
+              </div>
+              <div class="expert__ps">CHECK MORE LIBRARY</div>
+            </div>
+            <div class="expert__content">
+              <div class="expert__list">
+                <div class="expert__item">
+                  <div class="expert__item-heading">
+                    <h4>Drama</h4>
+                  </div>
+                  <div class="expert__item-block">
+                    <img src="/images/collection/collection1.jpg" alt="" />
+                    <div class="expert__item-top">
+                      <div class="expert__item--genre">Drama, Adventure</div>
+                      <div class="expert__item--title">WARDIANS</div>
+                      <hr />
+                      <div class="expert__item--year">2024</div>
+                    </div>
+                    <div class="expert__item-bottom">
+                      <div class="expert__item--created">Directed by</div>
+                      <div class="expert__item--name">Chiaki Kasuga</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="expert__item">
+                  <div class="expert__item-heading">
+                    <h4>Drama</h4>
+                  </div>
+                  <div class="expert__item-block">
+                    <img src="/images/collection/collection1.jpg" alt="" />
+                    <div class="expert__item-top">
+                      <div class="expert__item--genre">Drama, Adventure</div>
+                      <div class="expert__item--title">WARDIANS</div>
+                      <hr />
+                      <div class="expert__item--year">2024</div>
+                    </div>
+                    <div class="expert__item-bottom">
+                      <div class="expert__item--created">Directed by</div>
+                      <div class="expert__item--name">Chiaki Kasuga</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anime-price">
+          <div class="price">
+            <div class="price__info">
+              <div class="price__heading title--block">
+                <h4>Стоимость работ</h4>
+                <h2>Прайс на услуги</h2>
+              </div>
+              <div class="price__desk">
+                Enjoy endless entertainment with our vast library of movies,
+                available for streaming 24/7.
+                <div class="price__ps">
+                  <a href="#">CHECK MORE LIBRARY</a>
+                </div>
+              </div>
+            </div>
+            <div class="price__content">
+              <div class="price__list">
+                <div class="price__item">
+                  <div class="price__item-heading">
+                    <h3>Картинка</h3>
+                  </div>
+                  <div class="price__block">
+                    <div class="price__block-price">от 600</div>
+                    <div class="price__block-currency">р</div>
+                  </div>
+                  <hr />
+                  <div class="price__props">
+                    <div class="price__props-list">
+                      <div class="price__props-item">
+                        <div class="price__props-name">Размер</div>
+                        <div class="price__props-features">3840 X 2160 px</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Формат</div>
+                        <div class="price__props-features">А4</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Исходный файл</div>
+                        <div class="price__props-features">PSD</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Срок</div>
+                        <div class="price__props-features">5 дней</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="price__btn button">Подробнее</a>
+                </div>
+                <div class="price__item">
+                  <div class="price__item-heading">
+                    <h3>Аниме</h3>
+                  </div>
+                  <div class="price__block">
+                    <div class="price__block-price">от 400</div>
+                    <div class="price__block-currency">р</div>
+                  </div>
+                  <hr />
+                  <div class="price__props">
+                    <div class="price__props-list">
+                      <div class="price__props-item">
+                        <div class="price__props-name">Размер</div>
+                        <div class="price__props-features">3840 X 2160 px</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Формат</div>
+                        <div class="price__props-features">А4</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Исходный файл</div>
+                        <div class="price__props-features">MP4</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Срок</div>
+                        <div class="price__props-features">2 месяца</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="price__btn button">Подробнее</a>
+                </div>
+                <div class="price__item">
+                  <div class="price__item-heading">
+                    <h3>Ролик</h3>
+                  </div>
+                  <div class="price__block">
+                    <div class="price__block-price">от 200</div>
+                    <div class="price__block-currency">р</div>
+                  </div>
+                  <hr />
+                  <div class="price__props">
+                    <div class="price__props-list">
+                      <div class="price__props-item">
+                        <div class="price__props-name">Размер</div>
+                        <div class="price__props-features">3840 X 2160 px</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Формат</div>
+                        <div class="price__props-features">А4</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Исходный файл</div>
+                        <div class="price__props-features">PSD</div>
+                      </div>
+                      <div class="price__props-item">
+                        <div class="price__props-name">Срок</div>
+                        <div class="price__props-features">5 дней</div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="price__btn button">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anime-team">
+          <div class="team">
+            <div class="team__info">
+              <div class="team__heading title--block">
+                <h4>Творцы миров за кадром</h4>
+                <h2>Моя команда</h2>
+              </div>
+              <div class="team__desk">
+                Профессионалы с уникальным стилем, работающие над созданием
+                эмоций через искусство аниме-графики
+              </div>
+            </div>
+            <div class="team__block-artists">
+              <div class="team__artists-list">
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Вейс Полина</h3>
+                      <p class="artist-card__role">
+                        Режиссер анимации, раскадровщик и сценарист
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#сёнэн</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        ArtStation
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        Instagram
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       Twitter
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Ник Павлов</h3>
+                      <p class="artist-card__role">
+                        Режиссер дубляжа и продюсер-консультант
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#сёнэн</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        ArtStation
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        Instagram
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       Twitter
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Степан Ефремов</h3>
+                      <p class="artist-card__role">
+                        Звукорежиссер
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#сёнэн</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Ольга Сергеева</h3>
+                      <p class="artist-card__role">
+                        Сайнддизайнер
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#сёнэн</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Татьяна Лифанова</h3>
+                      <p class="artist-card__role">
+                        Художник фонов
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#aster</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Екатерина Сытник</h3>
+                      <p class="artist-card__role">
+                        Художник фонов
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#masomeru</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Мария Кихаял</h3>
+                      <p class="artist-card__role">
+                        Художник фонов
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#foyster</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Нина Бохан</h3>
+                      <p class="artist-card__role">
+                        Художник фонов
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#SKNVeresk</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Дмитрий Ульянов</h3>
+                      <p class="artist-card__role">
+                        Художник-аниматор
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#uita</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+                <div class="team__artist-item">
+                  <!-- Карточка художника -->
+                  <article class="artist-card">
+                    <!-- Аватар с декоративными элементами -->
+
+                    <div class="artist-card__avatar">
+                      <img
+                        src="images/team/artist-1.jpg"
+                        alt="Вейс Полина"
+                        class="artist-card__image"
+                      />
+                    </div>                    
+
+                    <!-- Основная информация -->
+                    <div class="artist-card__info">
+                      <h3 class="artist-card__name">Дмитрий Ульянов</h3>
+                      <p class="artist-card__role">
+                        Художник по раскраске кадров
+                      </p>
+                    </div>
+                    <div class="artist-card__flair">#uita</div>
+                    <!-- Специализация -->
+                    <div class="artist-card__specialization">
+                      <span class="artist-card__skill">Эмоции</span>
+                      <span class="artist-card__skill">Костюмы</span>
+                      <span class="artist-card__skill">Дизайн</span>
+                    </div>
+
+                    <!-- Описание и стиль -->
+                    <div class="artist-card__about">
+                      <p class="artist-card__desc">
+                        Создаю персонажей с глубиной характера и уникальной
+                        визуальной историей
+                      </p>
+                      <div class="artist-card__style">
+                        <span>Акварель Цифра Традиция</span>
+                      </div>
+                    </div>
+
+                    <!-- Социальные сети и контакты -->
+                    <div class="artist-card__social">
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--artstation"
+                        aria-label="ArtStation"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--instagram"
+                        aria-label="Instagram"
+                      >
+                        
+                      </a>
+                      <a
+                        href="#"
+                        class="artist-card__social-link artist-card__social-link--twitter"
+                        aria-label="Twitter"
+                      >
+                       
+                      </a>
+                    </div>                    
+                  </article>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="anime-designer"></section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__social">
+            <div class="footer__content-soc">
+              <div class="footer__soc-block">
+                <h3>социальные сети</h3>
+                <div class="footer__soc-list">
+                  <a class="insatgram-icon" href="#">insatgram/snegg</a>
+                  <a class="vk-icon" href="#">vk/snegg</a>
+                  <a class="telegram-icon" href="#">telegram/snegg</a>
+                  <a class="whatsup-icon" href="#">whatsup/snegg</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__menu">
+            <!-- Features -->
+            <div class="footer__column">
+              <h3 class="footer__heading">Features</h3>
+              <nav class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Send Gift Cards</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Redeem Gift Cards</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Ways to Watch</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Help Center -->
+            <div class="footer__column">
+              <h3 class="footer__heading">Help Center</h3>
+              <nav class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Jobs</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Report Bug</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Contact Us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Account -->
+            <div class="footer__column">
+              <h3 class="footer__heading">Account</h3>
+              <nav class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">My Account</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Cookie Preferences</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Company -->
+            <div class="footer__column">
+              <h3 class="footer__heading">Company</h3>
+              <nav class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Terms of Use</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Corporate Information</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="footer__link">Legal Notices</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__logo">
+            <a class="footer__logo-link" href="#">snegg 2024</a>
+          </div>
+        </div>
+      </footer>
+      <button id="back-top"></button>
+    </div>
+  </body>
+</html>

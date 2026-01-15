@@ -1,0 +1,570 @@
+.header 
+    
+    &__top-block
+        display: grid
+        align-items: center
+        justify-content: space-between
+        padding: 4rem 0
+        grid-template-columns: 21rem auto 21rem
+
+    &__logo 
+
+    &__logo-link 
+        @include h2-default
+        text-transform: uppercase
+        text-decoration: underline
+
+    &__lang 
+        display: flex
+        gap:  2rem
+
+    &__lang-btn 
+    &__lang-btn--active 
+    &__interactive    
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 1.5rem    
+        position: relative  
+    &__search 
+       
+        
+    &__search-form 
+        display: flex
+        align-items: center
+        position: absolute
+        top:-20rem
+        margin: 0 auto
+        width: 100%
+        font-size: 2rem
+        padding: 2rem 0 2rem 3rem
+        background-color: var(--black)
+        border-radius: 6rem        
+        margin-top: 1.5rem       
+        z-index:10
+        transition: var(--trasition-slow)    
+        box-shadow: 0 0 100px 0.3px var(--blue)   
+        backdrop-filter: blur(20px);
+        background: rgba(34, 34, 34, 0.7)
+        &.active
+           top: 0  
+           transition: var(--trasition-slow) 
+    &__input-button-form
+        display: flex
+        align-items: center
+        width: 100%
+    &__search-input 
+        border: 1px solid var(--white)         
+        height: 5.7rem
+        background-color: transparent
+        transition:  var(--trasition-defalt)  
+        padding: 0 1.6rem 0 5rem        
+        font-size: 1.8rem
+        width: 100%      
+        
+        &:focus
+            background: rgba(34, 34, 34, 0.7)
+            border: 1px solid var(--white)
+            color: var(--white)
+            border-radius: 3rem
+            padding: 2.1rem 1.6rem 2.1rem 5rem           
+            @include body-1
+            font-size: 1.8rem
+
+    &__cloze--search-input
+        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="12" fill="%23FF584E"/><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="%23F6F6F6"/></svg>')
+        background-repeat: no-repeat        
+        background-position: center center        
+        background-color: transparent
+        border: none
+        &:hover
+            background-color: transparent
+            border: none
+            transform: rotate(180deg)
+            transition:  var(--trasition-slow)
+            
+        
+    &__search-button
+        background-image: url('data:image/svg+xml;utf8,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.14583 12.3708 1.8875 11.1125C0.629167 9.85417 0 8.31667 0 6.5C0 4.68333 0.629167 3.14583 1.8875 1.8875C3.14583 0.629167 4.68333 0 6.5 0C8.31667 0 9.85417 0.629167 11.1125 1.8875C12.3708 3.14583 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.8125 10.5625 9.6875 9.6875C10.5625 8.8125 11 7.75 11 6.5C11 5.25 10.5625 4.1875 9.6875 3.3125C8.8125 2.4375 7.75 2 6.5 2C5.25 2 4.1875 2.4375 3.3125 3.3125C2.4375 4.1875 2 5.25 2 6.5C2 7.75 2.4375 8.8125 3.3125 9.6875C4.1875 10.5625 5.25 11 6.5 11Z" fill="%23F6F6F6"/></svg>')
+        background-repeat: no-repeat        
+        background-position: center center
+        position: absolute
+        right: 9rem
+        top: 50%
+        transform:  translateY(-50%)
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer        
+        width: 5.8rem
+        aspect-ratio: 1
+        transition: var(--trasition-slow)
+        &:hover
+            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.825 19.6501L11.475 13.3001C10.975 13.6834 10.3625 13.9876 9.63751 14.2126C8.91251 14.4376 8.17501 14.5501 7.42501 14.5501C5.44168 14.5501 3.76251 13.8626 2.38751 12.4876C1.01251 11.1126 0.325012 9.43343 0.325012 7.4501C0.325012 5.46676 1.01251 3.7876 2.38751 2.4126C3.76251 1.0376 5.44168 0.350098 7.42501 0.350098C9.40835 0.350098 11.0875 1.0376 12.4625 2.4126C13.8375 3.7876 14.525 5.46676 14.525 7.4501C14.525 8.2001 14.4208 8.91677 14.2125 9.6001C14.0042 10.2834 13.7 10.8918 13.3 11.4251L19.675 17.8001L17.825 19.6501ZM7.42501 11.9001C8.67501 11.9001 9.72918 11.4709 10.5875 10.6126C11.4458 9.75426 11.875 8.7001 11.875 7.4501C11.875 6.2001 11.4458 5.14593 10.5875 4.2876C9.72918 3.42926 8.67501 3.0001 7.42501 3.0001C6.17501 3.0001 5.12085 3.42926 4.26251 4.2876C3.40418 5.14593 2.97501 6.2001 2.97501 7.4501C2.97501 8.7001 3.40418 9.75426 4.26251 10.6126C5.12085 11.4709 6.17501 11.9001 7.42501 11.9001Z" fill="%23F6F6F6"/></svg>')
+            background-repeat: no-repeat        
+            background-position: center center
+            position: absolute
+            right: 9rem
+            top: 50%
+            transform:  translateY(-50%)
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer        
+            width: 5.8rem
+            aspect-ratio: 1
+            transition: var(--trasition-slow)
+           
+        
+
+    &__search-btn-link
+        background-image: url('data:image/svg+xml;utf8,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.14583 12.3708 1.8875 11.1125C0.629167 9.85417 0 8.31667 0 6.5C0 4.68333 0.629167 3.14583 1.8875 1.8875C3.14583 0.629167 4.68333 0 6.5 0C8.31667 0 9.85417 0.629167 11.1125 1.8875C12.3708 3.14583 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.8125 10.5625 9.6875 9.6875C10.5625 8.8125 11 7.75 11 6.5C11 5.25 10.5625 4.1875 9.6875 3.3125C8.8125 2.4375 7.75 2 6.5 2C5.25 2 4.1875 2.4375 3.3125 3.3125C2.4375 4.1875 2 5.25 2 6.5C2 7.75 2.4375 8.8125 3.3125 9.6875C4.1875 10.5625 5.25 11 6.5 11Z" fill="%23F6F6F6"/></svg>')
+        background-position: center center
+        background-repeat: no-repeat   
+       
+
+    &__notifications 
+        .notifications-toggle 
+           background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10.0251C2 8.35843 2.37083 6.82926 3.1125 5.4376C3.85417 4.04593 4.85 2.89176 6.1 1.9751L7.275 3.5751C6.275 4.30843 5.47917 5.23343 4.8875 6.3501C4.29583 7.46676 4 8.69177 4 10.0251H2ZM20 10.0251C20 8.69177 19.7042 7.46676 19.1125 6.3501C18.5208 5.23343 17.725 4.30843 16.725 3.5751L17.9 1.9751C19.15 2.89176 20.1458 4.04593 20.8875 5.4376C21.6292 6.82926 22 8.35843 22 10.0251H20ZM4 19.0251V17.0251H6V10.0251C6 8.64177 6.41667 7.4126 7.25 6.3376C8.08333 5.2626 9.16667 4.55843 10.5 4.2251V3.5251C10.5 3.10843 10.6458 2.75426 10.9375 2.4626C11.2292 2.17093 11.5833 2.0251 12 2.0251C12.4167 2.0251 12.7708 2.17093 13.0625 2.4626C13.3542 2.75426 13.5 3.10843 13.5 3.5251V4.2251C14.8333 4.55843 15.9167 5.2626 16.75 6.3376C17.5833 7.4126 18 8.64177 18 10.0251V17.0251H20V19.0251H4ZM12 22.0251C11.45 22.0251 10.9792 21.8293 10.5875 21.4376C10.1958 21.0459 10 20.5751 10 20.0251H14C14 20.5751 13.8042 21.0459 13.4125 21.4376C13.0208 21.8293 12.55 22.0251 12 22.0251ZM8 17.0251H16V10.0251C16 8.9251 15.6083 7.98343 14.825 7.2001C14.0417 6.41676 13.1 6.0251 12 6.0251C10.9 6.0251 9.95833 6.41676 9.175 7.2001C8.39167 7.98343 8 8.9251 8 10.0251V17.0251Z" fill="%23F6F6F6"/></svg>')
+           background-position: center center
+           background-repeat: no-repeat       
+
+    &__burger-btn
+        background-image: url('data:image/svg+xml;utf8,<svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="%23F6F6F6"/></svg>')
+        background-position: center center
+        background-repeat: no-repeat        
+        display: block
+        width: 5.8rem
+        aspect-ratio: 1
+        position: absolute
+        top:50%
+        left: 50%
+        transform: translate(-50%, -50%) 
+
+    &__nav 
+        position: relative
+        
+    &__burger 
+        position: relative
+    &__dropdown-nenu--block
+        position: absolute
+        right: 0
+        top: 0
+        padding: 2rem
+        background-color: var(--black)
+        border-radius: 1rem
+        min-width: 35rem
+        width: 100%
+        z-index: 2
+        box-shadow: 0 0 70px 0.3px var(--blue)
+        transition: var(--trasition-defalt) 
+        display: flex       
+        justify-content: space-between        
+        flex-direction: column
+        gap: 1rem        
+        backdrop-filter: blur(20px);
+        background: rgba(34, 34, 34, 0.7)
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
+        &:hover
+           box-shadow: 0 0 100px 0.3px var(--blue)
+           transition: var(--trasition-defalt)
+        &.active
+           display: flex 
+           transition: var(--trasition-defalt)
+           opacity: 1
+           visibility: visible
+           pointer-events: all
+    &__nav-menu 
+        //display: none
+        &.active
+    &__nav-button--block
+        
+    &__nav-button--close
+        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="12" fill="%23FF584E"/><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="%23F6F6F6"/></svg>')
+        background-repeat: no-repeat        
+        background-position: center center        
+        background-color: transparent
+        border: none 
+        padding: 1.2rem       
+        position: absolute
+        top: 1.6rem
+        right: 1.6rem       
+        cursor: pointer
+        z-index: 3
+        &:hover
+            background-color: transparent
+            border: none
+            transform: rotate(180deg)
+            transition:  var(--trasition-slow)
+        
+    &__nav-list 
+        position: relative               
+         
+    &__nav-item
+        padding: 1rem
+    &__nav-link 
+        @include h4-default
+        font-weight: 400
+        text-transform: uppercase        
+        overflow: hidden
+        &::before 
+            content: "" 
+            display: block  
+            width: 3px
+            height: 2rem
+            background-color: var(--blue)
+            position: absolute
+            left: -5px                     
+            
+        &:hover
+            &::before
+                animation: line-menu-left-to-rigth .9s
+                     
+    &__nav-menu--soc
+        display: flex
+        justify-content: space-between
+    &__soc-block        
+        display: flex
+        flex-direction: column
+        gap: 0.6rem
+        justify-content: end
+        a            
+            svg
+                width: 2.5rem
+                height: 2.5rem
+                fill: var(--blue) 
+                transform: scale(1.3)
+    &__bottom--block 
+        max-height: 58rem
+        height: 100%  
+          
+        
+        
+        
+    &__banner--slider             
+            
+    &__banner-shadow
+        width: 100vw
+        height: 720px             
+        position: absolute
+        margin-left: 50%
+        transform: translate(-50%) 
+        z-index: -1 
+        top: 0
+        background-color: rgba(0, 0, 0, 0.4)  
+        //box-shadow: inset 40px 0 30px -30px rgb(17, 17, 17),inset -40px 0 30px -30px rgb(17, 17, 17)
+            
+
+    &__banner--list
+        .slick-slider
+            
+        .slick-list
+            position: absolute 
+            top: 0
+            width: 100vw             
+            height: 720px         
+            z-index: -2
+            margin-left: calc(-50vw + 50%);
+            
+        .slick-dots
+            position: absolute 
+            z-index: 1000
+            right: 0             
+            top: 50%
+            transform: translateY(-50%)
+            display: flex
+            flex-direction: column
+            gap:2rem
+            li
+                button
+                    background: none
+                    border: none
+                    font-size: 0
+                    height: .8rem
+                    width: .8rem
+                    margin: 0
+                    padding: 0
+                    background-color: var(--white)
+                &.slick-active
+                    transition: all 5s;
+            
+            .slick-active
+                button
+                    background: none
+                    border: none
+                    font-size: 0
+                    height: 5rem
+                    width: .8rem
+                    margin: 0
+                    padding: 0
+                    background-color: var(--white)
+                    border-radius: 8px
+            
+               
+        .slick-arrow
+            display: none !important   
+        
+        
+    &__banner--item
+        &.slick-slide
+            max-width: 100vw
+            width: 100% !important
+            height: 720px
+            //padding: 0 0 47% 0         
+            position: absolute !important
+            left: 0 !important
+            top: 0 !important       
+            margin-left: 50%
+            transform: translate(-50%) 
+            z-index: -2 !important       
+            display: block        
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                position: absolute
+                top: 0
+                left: 0
+                
+    &__content 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        padding: 3.6rem 0 
+    &__content-heding
+        display: flex
+        flex-direction: column
+        gap: 2.5rem        
+        h1
+            text-transform: uppercase            
+            
+    &__content--desk
+        max-width: 50rem
+        font-size: 1.6rem
+        line-height: 20px
+        position: relative
+        &:before
+            content: ""           
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            box-shadow: 0 0 15px 5px rgba(0,174,221, 0.05), 0 0 30px 10px rgba(0,174,221, 0.1), 0 0 45px 15px rgba(0,174,221, 0.05)
+            background: rgba(0,174,221, 0.15)
+            border-radius: 8px
+            
+                    
+
+    &__content--button
+        background-color: var(--blue)
+        padding: 1.8rem 3.2rem
+        text-transform: uppercase
+        font-size: 1.6rem
+        font-weight: 800;
+        font-family: "Raleway", sans-serif
+        color: var(--white)
+        border-radius: var(--radius-button)
+        border: 2px solid var(--blue)
+        transition: var(--trasition-defalt)
+        cursor: pointer
+        display: inline-block
+        width: -moz-fit-content
+        width: fit-content
+        &:hover            
+            transform: translate(-2px, -2px) !important
+        &:after
+            
+
+    &__content-soc 
+        display: flex
+        align-items: end
+        justify-content: space-between
+
+    &__soc-block
+        display: flex
+        flex-direction: column
+        h3
+            text-transform: uppercase 
+        h5
+            text-transform: uppercase
+            margin-bottom: 4rem 
+
+    &__soc-list 
+        display: flex
+        flex-direction: column
+        //width: fit-content
+        gap:1.5rem
+    
+        overflow: hidden
+        a
+            @include h3-default
+            font-size: 1.6rem
+            text-transform: uppercase
+            //text-decoration: underline
+            position: relative
+            line-height: 1.2                             
+            &.telegram-icon 
+                position: relative 
+                transition: transform .3s .1s, color .3s .1s             
+                &::before                    
+                    content:""                    
+                    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 60 60"><path fill-rule="evenodd" clip-rule="evenodd" d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24ZM24.8601 17.7179C22.5257 18.6888 17.8603 20.6984 10.8638 23.7466C9.72766 24.1984 9.13251 24.6404 9.07834 25.0726C8.98677 25.803 9.90142 26.0906 11.1469 26.4822C11.3164 26.5355 11.4919 26.5907 11.6719 26.6492C12.8973 27.0475 14.5457 27.5135 15.4026 27.5321C16.1799 27.5489 17.0475 27.2284 18.0053 26.5707C24.5423 22.158 27.9168 19.9276 28.1286 19.8795C28.2781 19.8456 28.4852 19.803 28.6255 19.9277C28.7659 20.0524 28.7521 20.2886 28.7372 20.352C28.6466 20.7383 25.0562 24.0762 23.1982 25.8036C22.619 26.3421 22.2081 26.724 22.1242 26.8113C21.936 27.0067 21.7443 27.1915 21.56 27.3692C20.4215 28.4667 19.5678 29.2896 21.6072 30.6336C22.5873 31.2794 23.3715 31.8135 24.1539 32.3463C25.0084 32.9282 25.8606 33.5085 26.9632 34.2313C27.2442 34.4155 27.5125 34.6068 27.7738 34.7931C28.7681 35.5019 29.6615 36.1388 30.7652 36.0373C31.4065 35.9782 32.0689 35.3752 32.4053 33.5767C33.2004 29.3263 34.7633 20.1169 35.1244 16.3219C35.1561 15.9895 35.1163 15.5639 35.0843 15.3771C35.0523 15.1904 34.9855 14.9242 34.7427 14.7272C34.4552 14.4939 34.0113 14.4447 33.8127 14.4482C32.91 14.4641 31.5251 14.9456 24.8601 17.7179Z" fill="%2300aedd"/></svg>')  
+                    background-repeat: no-repeat                                            
+                    padding: 0 0 2rem 2rem                    
+                    position: absolute
+                    left: -2.2rem
+                    top:1px                    
+                    opacity: 0
+                    transition: opacity .3s 
+                &:hover
+                    transform: translateX(2.4rem) 
+                    transition: transform .3s, color .3s
+                    color: var(--blue)
+                    &:before 
+                        opacity: 1  
+                        transition: opacity .3s  
+            &.vk-icon 
+                position: relative 
+                transition: transform .3s .1s, color .3s .1s            
+                &::before                    
+                    content:""
+                    display: block
+                    background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="20px" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.37413 3.37413C0 6.74826 0 12.1788 0 23.04V24.96C0 35.8212 0 41.2517 3.37413 44.6259C6.74826 48 12.1788 48 23.04 48H24.96C35.8212 48 41.2517 48 44.6259 44.6259C48 41.2517 48 35.8212 48 24.96V23.04C48 12.1788 48 6.74826 44.6259 3.37413C41.2517 0 35.8212 0 24.96 0H23.04C12.1788 0 6.74826 0 3.37413 3.37413ZM8.10012 14.6001C8.36012 27.0801 14.6001 34.5801 25.5401 34.5801H26.1602V27.4401C30.1802 27.8401 33.22 30.7801 34.44 34.5801H40.1201C38.5601 28.9001 34.4599 25.7601 31.8999 24.5601C34.4599 23.0801 38.0599 19.4801 38.9199 14.6001H33.7598C32.6398 18.5601 29.3202 22.1601 26.1602 22.5001V14.6001H21V28.4401C17.8 27.6401 13.7601 23.7601 13.5801 14.6001H8.10012Z" fill="%2300aedd"/></svg>')  
+                    background-repeat: no-repeat                                                              
+                    padding: 0 0 2rem 2rem                    
+                    position: absolute
+                    left: -2.2rem
+                    top:1px                    
+                    opacity: 0
+                    transition: opacity .3s 
+                &:hover
+                    transform: translateX(2.4rem)
+                    transition: transform .3s .1s, color .3s .1s 
+                    color: var(--blue)
+                    &:before 
+                        opacity: 1  
+                        transition: opacity .3s 
+            &.insatgram-icon
+                position: relative 
+                transition: transform .3s .1s, color .3s .1s            
+                &::before                    
+                    content:""
+                    display: block
+                    background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="20px" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="%2300aedd"/><path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="%2300aedd"/><path d="M39.6937 11.1843C39.6937 12.778 38.4 14.0624 36.8156 14.0624C35.2219 14.0624 33.9375 12.7687 33.9375 11.1843C33.9375 9.59053 35.2313 8.30615 36.8156 8.30615C38.4 8.30615 39.6937 9.5999 39.6937 11.1843Z" fill="%2300aedd"/></svg>')  
+                    background-repeat: no-repeat                                            
+                    padding: 0 0 2rem 2rem                    
+                    position: absolute
+                    left: -2.2rem
+                    top:1px                    
+                    opacity: 0
+                    transition: opacity .3s 
+                &:hover
+                    transform: translateX(2.4rem)
+                    transition: transform .3s .1s, color .3s .1s 
+                    color: var(--blue)
+                    text-decoration: underline
+                    &:before 
+                        opacity: 1  
+                        transition: opacity .3s                         
+            &.whatsup-icon
+                position: relative 
+                transition: transform .3s .1s, color .3s .1s            
+                &::before                    
+                    content:""
+                    display: block
+                    background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="20px" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48L3.374 35.674C1.292 32.066 0.198 27.976 0.2 23.782C0.206 10.67 10.876 0 23.986 0C30.348 0.002 36.32 2.48 40.812 6.976C45.302 11.472 47.774 17.448 47.772 23.804C47.766 36.918 37.096 47.588 23.986 47.588C20.006 47.586 16.084 46.588 12.61 44.692L0 48ZM13.194 40.386C16.546 42.376 19.746 43.568 23.978 43.57C34.874 43.57 43.75 34.702 43.756 23.8C43.76 12.876 34.926 4.02 23.994 4.016C13.09 4.016 4.22 12.884 4.216 23.784C4.214 28.234 5.518 31.566 7.708 35.052L5.71 42.348L13.194 40.386ZM35.968 29.458C35.82 29.21 35.424 29.062 34.828 28.764C34.234 28.466 31.312 27.028 30.766 26.83C30.222 26.632 29.826 26.532 29.428 27.128C29.032 27.722 27.892 29.062 27.546 29.458C27.2 29.854 26.852 29.904 26.258 29.606C25.664 29.308 23.748 28.682 21.478 26.656C19.712 25.08 18.518 23.134 18.172 22.538C17.826 21.944 18.136 21.622 18.432 21.326C18.7 21.06 19.026 20.632 19.324 20.284C19.626 19.94 19.724 19.692 19.924 19.294C20.122 18.898 20.024 18.55 19.874 18.252C19.724 17.956 18.536 15.03 18.042 13.84C17.558 12.682 17.068 12.838 16.704 12.82L15.564 12.8C15.168 12.8 14.524 12.948 13.98 13.544C13.436 14.14 11.9 15.576 11.9 18.502C11.9 21.428 14.03 24.254 14.326 24.65C14.624 25.046 18.516 31.05 24.478 33.624C25.896 34.236 27.004 34.602 27.866 34.876C29.29 35.328 30.586 35.264 31.61 35.112C32.752 34.942 35.126 33.674 35.622 32.286C36.118 30.896 36.118 29.706 35.968 29.458Z" fill="%2300aedd"/></svg>')  
+                    background-repeat: no-repeat                                            
+                    padding: 0 0 2rem 2rem                    
+                    position: absolute
+                    left: -2.2rem
+                    top:1px                    
+                    opacity: 0
+                    transition: opacity .3s 
+                &:hover
+                    transform: translateX(2.4rem)
+                    transition: transform .3s .1s, color .3s .1s 
+                    color: var(--blue)
+                    &:before 
+                        opacity: 1  
+                        transition: opacity .3s              
+                                  
+
+    &__soc-autor 
+        display: flex
+        flex-direction: column
+        gap: 3rem
+        max-width: 28rem
+        text-align: center
+        align-items: center
+
+    &__autor-link 
+
+    &__link-title 
+        width: 100%
+        
+        a
+            @include h4-default
+            font-size: 1.6rem
+            text-transform: uppercase 
+            display: flex
+            align-items: center
+            justify-content: space-between 
+            gap:1rem
+            position: relative 
+            transition: var(--trasition-defalt) 
+            line-height: 2rem           
+            /*&:after
+                content:""
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.464cm" height="1.464cm"><path fill-rule="evenodd" stroke="%23f6f6f6" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.500,20.500 C0.500,9.454 9.454,0.500 20.500,0.500 L20.500,0.500 C31.546,0.500 40.500,9.454 40.500,20.500 L40.500,20.500 C40.500,31.546 31.546,40.499 20.500,40.499 L20.500,40.499 C9.454,40.499 0.500,31.546 0.500,20.500 L0.500,20.500 Z"/><path fill-rule="evenodd"  fill="%23f6f6f6" d="M23.500,27.500 L22.075,26.100 L26.675,21.500 L10.500,21.500 L10.500,19.500 L26.675,19.500 L22.100,14.900 L23.500,13.500 L30.500,20.500 L23.500,27.500 Z"/></svg>')
+                background-repeat: no-repeat                
+                padding: 0 0 4.2rem 4.2rem 
+                display: block 
+                transition: var(--trasition-defalt)  */              
+            &:hover
+                color: var(--blue)
+                transition: var(--trasition-defalt)
+                /*&:after  
+                    content:""
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.464cm" height="1.464cm"><path fill-rule="evenodd" stroke="%2316aedd" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.500,20.500 C0.500,9.454 9.454,0.500 20.500,0.500 L20.500,0.500 C31.546,0.500 40.500,9.454 40.500,20.500 L40.500,20.500 C40.500,31.546 31.546,40.499 20.500,40.499 L20.500,40.499 C9.454,40.499 0.500,31.546 0.500,20.500 L0.500,20.500 Z"/><path fill-rule="evenodd"  fill="%2316aedd" d="M23.500,27.500 L22.075,26.100 L26.675,21.500 L10.500,21.500 L10.500,19.500 L26.675,19.500 L22.100,14.900 L23.500,13.500 L30.500,20.500 L23.500,27.500 Z"/></svg>')
+                    transform: translateX(5px)
+                    filter: invert(48%) sepia(90%) saturate(1500%) hue-rotate(180deg) brightness(90%) contrast(90%)*/           
+                
+                                   
+
+    &__autor--img 
+        width: 21.5rem
+        height: 21.5rem
+        border-radius: 2rem
+        display: block
+        overflow: hidden
+        box-shadow: 0 0 1.5rem 1px var(--dark-grey)
+        position: relative
+        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            //filter: brightness(50%)
+            
+
+    &__autor--text 
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        text-shadow: 0 0 6px var(--dark)
+         
+
+        
+
+
+        
+        
+    
+
+

@@ -1,0 +1,134 @@
+.price 
+     display: flex
+     gap: 4rem 
+     justify-content: space-between 
+     flex-direction: column      
+
+     &__info 
+          display: flex
+          gap: 4rem
+          margin-bottom: 4rem
+          
+
+     &__heading
+          flex: 1 0 65rem          
+           
+
+     &__desk
+          
+
+     &__ps
+          text-transform: lowercase
+          margin-top: 1rem           
+          a
+               color: var(--blue)
+               
+
+     
+     &__content          
+          .slick-slider
+               position: relative
+          .slick-list
+               overflow: hidden  
+               margin-bottom: 2rem             
+          .slick-track
+               display: flex 
+               align-items: flex-start 
+               gap: 2rem  
+               min-width: 0px           
+          .slick-slide
+               display: flex
+               flex-direction: column
+               position: relative  
+               padding: 0 3.6rem 0 1.8rem
+               flex:1
+          .slick-dots
+               display: flex
+               align-items: center
+               justify-content: center
+          .slick-active
+               button
+                    padding: 1rem
+                    margin: 0  
+                    font-size: 0             
+                             
+               
+
+          .slick-arrow
+               position: absolute
+               top: 50%
+               transform: translateY(-50%)
+               font-size: 0px 
+               padding: 2.5rem
+               z-index: 10
+               background-color: transparent
+               border-color: 1px solid var(--white)  
+               &:hover
+                    animation: pulse 1.5s infinite  
+          
+               
+
+          .slick-prev
+               left: 0
+               background: url("../images/svg/keyboard_arrow_left.svg") 50% 50% no-repeat
+              
+              
+                          
+          .slick-next
+               right: 0
+               background: url("../images/svg/keyboard_arrow_right.svg") 50% 50% no-repeat 
+
+     &__list
+          //display: flex
+
+     &__item
+          border-right: 1px solid var(--white)
+
+     &__item:last-child          
+          border: none
+
+     &__item-heading
+          margin-bottom: 2rem
+          h3
+               text-transform: uppercase 
+
+     &__block 
+          display: flex
+
+     &__block-price
+          font-size: 1.6rem 
+          font-weight: bold
+          font-family: 'Lato', sans-serif 
+
+     &__block-currency 
+
+     &__props
+          margin-block: 5rem 
+
+     &__props-list
+          display: flex
+          flex-direction: column 
+          gap: 1rem
+          
+
+     &__props-item 
+          display: flex
+          justify-content: space-between          
+          margin-bottom: 1rem                 
+          
+
+
+     &__props-name 
+          flex: 0 1 3rem
+          background-color: var(--dark-black)
+          line-height: 2rem
+
+     &__props-features 
+          background-color: var(--dark-black)
+          line-height: 2rem
+
+     &__btn   
+          font-size: 1.4rem !important      
+          &:hover
+               border-color: 1px solid var(--white) !important
+               background-color: transparent !important
