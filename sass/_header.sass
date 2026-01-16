@@ -424,10 +424,33 @@
             text-transform: uppercase
             //text-decoration: underline
             position: relative
-            line-height: 1.2                             
-            &.telegram-icon 
-                position: relative 
-                transition: transform .3s .1s, color .3s .1s             
+            line-height: 1.2 
+            &.telegram-icon,
+            &.vk-icon,
+            &.insatgram-icon,
+            &.whatsup-icon,
+            &.bluesky-icon 
+                position: relative
+                transition: transform .3s .1s, color .3s .1s
+                &::before
+                    content: ""
+                    display: block
+                    background-repeat: no-repeat
+                    padding: 0 0 2rem 2rem
+                    position: absolute
+                    left: -2.2rem
+                    top: 1px
+                    opacity: 0
+                    transition: opacity .3s
+                &:hover
+                    transform: translateX(2.4rem)
+                    transition: transform .3s .1s, color .3s .1s
+                    color: var(--blue)
+                    &::before
+                        opacity: 1
+                        transition: opacity .3s
+
+            &.telegram-icon                             
                 &::before                    
                     content:""                    
                     background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 60 60"><path fill-rule="evenodd" clip-rule="evenodd" d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24ZM24.8601 17.7179C22.5257 18.6888 17.8603 20.6984 10.8638 23.7466C9.72766 24.1984 9.13251 24.6404 9.07834 25.0726C8.98677 25.803 9.90142 26.0906 11.1469 26.4822C11.3164 26.5355 11.4919 26.5907 11.6719 26.6492C12.8973 27.0475 14.5457 27.5135 15.4026 27.5321C16.1799 27.5489 17.0475 27.2284 18.0053 26.5707C24.5423 22.158 27.9168 19.9276 28.1286 19.8795C28.2781 19.8456 28.4852 19.803 28.6255 19.9277C28.7659 20.0524 28.7521 20.2886 28.7372 20.352C28.6466 20.7383 25.0562 24.0762 23.1982 25.8036C22.619 26.3421 22.2081 26.724 22.1242 26.8113C21.936 27.0067 21.7443 27.1915 21.56 27.3692C20.4215 28.4667 19.5678 29.2896 21.6072 30.6336C22.5873 31.2794 23.3715 31.8135 24.1539 32.3463C25.0084 32.9282 25.8606 33.5085 26.9632 34.2313C27.2442 34.4155 27.5125 34.6068 27.7738 34.7931C28.7681 35.5019 29.6615 36.1388 30.7652 36.0373C31.4065 35.9782 32.0689 35.3752 32.4053 33.5767C33.2004 29.3263 34.7633 20.1169 35.1244 16.3219C35.1561 15.9895 35.1163 15.5639 35.0843 15.3771C35.0523 15.1904 34.9855 14.9242 34.7427 14.7272C34.4552 14.4939 34.0113 14.4447 33.8127 14.4482C32.91 14.4641 31.5251 14.9456 24.8601 17.7179Z" fill="%2300aedd"/></svg>')  
@@ -437,17 +460,8 @@
                     left: -2.2rem
                     top:1px                    
                     opacity: 0
-                    transition: opacity .3s 
-                &:hover
-                    transform: translateX(2.4rem) 
-                    transition: transform .3s, color .3s
-                    color: var(--blue)
-                    &:before 
-                        opacity: 1  
-                        transition: opacity .3s  
-            &.vk-icon 
-                position: relative 
-                transition: transform .3s .1s, color .3s .1s            
+                    transition: opacity .3s                 
+            &.vk-icon                           
                 &::before                    
                     content:""
                     display: block
@@ -458,17 +472,9 @@
                     left: -2.2rem
                     top:1px                    
                     opacity: 0
-                    transition: opacity .3s 
-                &:hover
-                    transform: translateX(2.4rem)
-                    transition: transform .3s .1s, color .3s .1s 
-                    color: var(--blue)
-                    &:before 
-                        opacity: 1  
-                        transition: opacity .3s 
+                    transition: opacity .3s                
             &.insatgram-icon
-                position: relative 
-                transition: transform .3s .1s, color .3s .1s            
+                display: none           
                 &::before                    
                     content:""
                     display: block
@@ -479,18 +485,9 @@
                     left: -2.2rem
                     top:1px                    
                     opacity: 0
-                    transition: opacity .3s 
-                &:hover
-                    transform: translateX(2.4rem)
-                    transition: transform .3s .1s, color .3s .1s 
-                    color: var(--blue)
-                    text-decoration: underline
-                    &:before 
-                        opacity: 1  
-                        transition: opacity .3s                         
+                    transition: opacity .3s                                        
             &.whatsup-icon
-                position: relative 
-                transition: transform .3s .1s, color .3s .1s            
+                display: none            
                 &::before                    
                     content:""
                     display: block
@@ -502,14 +499,9 @@
                     top:1px                    
                     opacity: 0
                     transition: opacity .3s 
-                &:hover
-                    transform: translateX(2.4rem)
-                    transition: transform .3s .1s, color .3s .1s 
-                    color: var(--blue)
-                    &:before 
-                        opacity: 1  
-                        transition: opacity .3s              
-                                  
+            &.bluesky-icon
+                &::before
+                    background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="20px" viewBox="0 0 576 512" fill="%2300aedd"><title>Bluesky SVG Icon</title><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3.5-6.6 1-10 1.4c-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4.4 6.7.9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"></path></svg>')                
 
     &__soc-autor 
         display: flex
