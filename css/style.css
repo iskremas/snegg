@@ -856,6 +856,7 @@ section [class*=__desk] {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  pointer-events: none;
 }
 .header__banner--list .slick-dots li button {
   background: none;
