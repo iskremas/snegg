@@ -23,10 +23,11 @@
     &__interactive    
         display: flex
         align-items: center
-        justify-content: space-between
+        justify-content: end
         gap: 1.5rem    
         position: relative  
     &__search 
+        display: none
        
         
     &__search-form 
@@ -124,6 +125,7 @@
        
 
     &__notifications 
+        display: none
         .notifications-toggle 
            background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10.0251C2 8.35843 2.37083 6.82926 3.1125 5.4376C3.85417 4.04593 4.85 2.89176 6.1 1.9751L7.275 3.5751C6.275 4.30843 5.47917 5.23343 4.8875 6.3501C4.29583 7.46676 4 8.69177 4 10.0251H2ZM20 10.0251C20 8.69177 19.7042 7.46676 19.1125 6.3501C18.5208 5.23343 17.725 4.30843 16.725 3.5751L17.9 1.9751C19.15 2.89176 20.1458 4.04593 20.8875 5.4376C21.6292 6.82926 22 8.35843 22 10.0251H20ZM4 19.0251V17.0251H6V10.0251C6 8.64177 6.41667 7.4126 7.25 6.3376C8.08333 5.2626 9.16667 4.55843 10.5 4.2251V3.5251C10.5 3.10843 10.6458 2.75426 10.9375 2.4626C11.2292 2.17093 11.5833 2.0251 12 2.0251C12.4167 2.0251 12.7708 2.17093 13.0625 2.4626C13.3542 2.75426 13.5 3.10843 13.5 3.5251V4.2251C14.8333 4.55843 15.9167 5.2626 16.75 6.3376C17.5833 7.4126 18 8.64177 18 10.0251V17.0251H20V19.0251H4ZM12 22.0251C11.45 22.0251 10.9792 21.8293 10.5875 21.4376C10.1958 21.0459 10 20.5751 10 20.0251H14C14 20.5751 13.8042 21.0459 13.4125 21.4376C13.0208 21.8293 12.55 22.0251 12 22.0251ZM8 17.0251H16V10.0251C16 8.9251 15.6083 7.98343 14.825 7.2001C14.0417 6.41676 13.1 6.0251 12 6.0251C10.9 6.0251 9.95833 6.41676 9.175 7.2001C8.39167 7.98343 8 8.9251 8 10.0251V17.0251Z" fill="%23F6F6F6"/></svg>')
            background-position: center center
@@ -176,6 +178,9 @@
            opacity: 1
            visibility: visible
            pointer-events: all
+           .header__soc-block
+               display: none
+
     &__nav-menu 
         //display: none
         &.active
@@ -229,7 +234,7 @@
         display: flex
         flex-direction: column
         gap: 0.6rem
-        justify-content: end
+        justify-content: end        
         a            
             svg
                 width: 2.5rem
@@ -388,11 +393,12 @@
     &__soc-block
         display: flex
         flex-direction: column
+        
         h3
             text-transform: uppercase 
         h5
             text-transform: uppercase
-            margin-bottom: 4rem 
+            margin-bottom: 2rem 
 
     &__soc-list 
         display: flex
@@ -501,6 +507,7 @@
         max-width: 28rem
         text-align: center
         align-items: center
+        display: none
 
     &__autor-link 
 
